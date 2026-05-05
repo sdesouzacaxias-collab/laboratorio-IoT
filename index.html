@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT Sensores</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>IoT: Sensores Luminosidade, Temperatura, Umidade e Alarme</h1>
+      <p>O sistema funciona 100% automático: todos os dados dos cards variam aleatoriamente. O ar-condicionado liga quando a temperatura sobe acima de 25°C ou quando a umidade cai abaixo de 50% com temperatura abaixo de 25°C.</p>
+      <p class="monitor-status" id="monitor-status">Monitoramento automático ativo</p>
+    </header>
+
+    <section class="cards">
+      <article class="card" id="light-card">
+        <div class="card-icon">💡</div>
+        <div>
+          <h2>Sensor de Luminosidade</h2>
+          <p>Valor atual: <span id="light-value">50</span>%</p>
+          <p>Status lâmpada: <strong id="lamp-status">Desligada</strong></p>
+        </div>
+      </article>
+
+      <article class="card" id="temp-card">
+        <div class="card-icon">🌡️</div>
+        <div>
+          <h2>Sensor de Temperatura</h2>
+          <p>Valor atual: <span id="temp-value">24</span>°C</p>
+          <p>Status ar-condicionado: <strong id="ac-status">Desligado</strong></p>
+        </div>
+      </article>
+
+      <article class="card" id="humidity-card">
+        <div class="card-icon">💧</div>
+        <div>
+          <h2>Sensor de Umidade</h2>
+          <p>Valor atual: <span id="humidity-value">55</span>%</p>
+        </div>
+      </article>
+
+      <article class="card" id="door-card">
+        <div class="card-icon">🚪</div>
+        <div>
+          <h2>Alarme de Porta</h2>
+          <p>Porta: <strong id="door-state">Fechada</strong></p>
+          <p>Status alarme: <strong id="alarm-status">Desligado</strong></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="auto-note">
+      <p>Os valores dos sensores são gerados automaticamente e o sistema age sem necessidade de interação manual.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
